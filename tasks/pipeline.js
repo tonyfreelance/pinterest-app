@@ -27,14 +27,18 @@ var jsFilesToInject = [
 
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
-  "/js/dependencies/angular.min.js",
+  
 
   // Dependencies like jQuery, or Angular are brought in here
+  "/js/dependencies/angular.js",
+  "/js/dependencies/jquery.js",
   'js/dependencies/**/*.js',
+
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
-  'js/**/*.js'
+  'js/**/*.js',
+
 ];
 
 
@@ -70,7 +74,5 @@ module.exports.jsFilesToInject = jsFilesToInject.map(function(jsPath) {
   return require('path').join('.tmp/public/', jsPath);
 });
 module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPath) {
-  return require('path').join('assets/',tplPath);
+  return require('path').join('assets/', tplPath);
 });
-
-

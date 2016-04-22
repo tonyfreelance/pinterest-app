@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-center">Pins for user <strong>{{vm.username}}</strong>:</h4>
+            <div deckgrid class="deckgrid" source="vm.userPins">
+                <div class="card text-center">
+                    <div class="img-wrapper">
+                        <img ng-src="{{card.url}}" fallback-src="{{'https:\//placeholdit.imgix.net/~text?txtsize=33&txt=No%20Image!&w=188&h=188'}}" alt="{{card.title}}" />
+                    </div>
+                    <div class="caption">
+                        <div class="pin-title">
+                            {{card.title}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

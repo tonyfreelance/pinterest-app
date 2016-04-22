@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="col-sm-6 col-sm-offset-3">
+    
+        <h1>Add new pin</h1>
+
+        <form ng-submit="vm.addPin()" method="post">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" name="title" ng-model="vm.title" required>
+            </div>
+            <div class="form-group">
+                <label>Pin URL</label>
+                <input type="text" class="form-control" name="pinUrl" ng-model="vm.pinUrl" required>
+            </div>
+    
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    
+
+    </div>
+
+</div>

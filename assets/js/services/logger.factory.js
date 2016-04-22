@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('')
+    .module('PinterestApp')
     .factory('logger', logger);
 
 logger.$inject = ['toastr', '$log'];

@@ -1,0 +1,38 @@
+<div class="container" ng-controller="NavbarController as vm">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">MyPins</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li ng-class="{active: vm.isActive('/')}"><a href="/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-show="!vm.isAuthenticated()">
+          <li><a href="" class="signin" ng-click="vm.authenticate('twitter')"><i class="fa fa-twitter"></i> Signin with Twitter</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-show="vm.isAuthenticated()">
+          <li ng-class="{active: vm.isActive('/my-pins')}"><a href="/my-pins">My Pins</a></li>
+          <li ng-class="{active: vm.isActive('/add-pin')}"><a href="/add-pin">Add</a></li>
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{vm.getUsername()}}<strong class="caret"></strong></a>
+            <div class="dropdown-menu">
+	            <a ng-href="/logout" class="btn btn-block btn-default" id="login-buttons-logout">Log out</a>
+					  </div>
+          </li>
+          <li></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  
+  <div ui-view></div>
+  
+</div>
+<!-- /.container -->

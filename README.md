@@ -1,3 +1,3 @@
-# Another Tony's App
+# Pinterest App
 
 a [Sails](http://sailsjs.org) application
